@@ -50,13 +50,13 @@ b) przekopiuj jeden z wybranych plików do lokalnego systemu plików, np.
 ```sh
 hadoop fs -copyToLocal output/part-r-00000 part-00001
 ```
+
 c) zobacz jego zawartość (30 pierwszy wierszy)
 ```sh
 head -n 30 part-00001
 ```
 
 8. Uruchom pig'a:
-
 ```sh
 export PIG_CLASSPATH=/etc/hadoop/conf.empty:/etc/tez/conf
 pig -x tez
@@ -70,6 +70,7 @@ pig -x tez -f analysis.pig
 ```
 
 11. Sprawdź wynik końcowy:
+ 
  a) przekopiuj pliki winikowe do środowiska lokalnego
 ```sh
 hadoop fs -ls output
